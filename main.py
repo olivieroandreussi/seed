@@ -2,16 +2,18 @@ def readFile():
     file_name = "cord.txt"
     with open(file_name, 'r') as file:
         lines = file.readlines()
-        array_2d = [list(map(int, line.strip().replace('(', '').replace(')', '').split(','))) for line in lines]
+        array_2d = [list(map(int, line.strip().replace(
+            '(', '').replace(')', '').split(','))) for line in lines]
         return array_2d
+
 
 result = readFile()
 
-sumX = 0;
-sumY = 0;
-sumXY = 0;
-sumX2 = 0;
-total = 0;
+sumX = 0
+sumY = 0
+sumXY = 0
+sumX2 = 0
+total = 0
 for cord in result:
     sumX += cord[0]
     sumY += cord[1]
