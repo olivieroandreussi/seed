@@ -6,7 +6,7 @@ def readFile():
         return array_2d
 
 result = readFile()
-print(result)
+
 sumX = 0;
 sumY = 0;
 sumXY = 0;
@@ -18,7 +18,7 @@ for cord in result:
     sumXY += cord[0] * cord[1]
     sumX2 += cord[0] * cord[0]
     total += 1
+
 slope = (sumXY * total - sumX * sumY) / (sumX2 * total - sumX * sumX)
-print(str(sumY) + ", " + str(sumX) + ", " + str(total))
 intercept = (sumY - slope * sumX) / total
 print("y = " + str(slope) + "x + " + str(intercept))
